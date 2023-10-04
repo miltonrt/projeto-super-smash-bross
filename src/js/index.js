@@ -21,3 +21,10 @@ personagens.forEach((personagem) => {
         botao.href = `./src/intro/${idSelecionado}.html`
     });
 })
+
+// const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+// const audioElement = new Audio('./src/audio/super_smash_bross.mp3');
+// const audioSource = audioContext.createMediaElementSource(audioElement);
+
+// audioSource.connect(audioContext.destination);
+// audioElement.play();
