@@ -1,0 +1,242 @@
+html {
+    font-family: 'ssbf' Courier, monospace;
+}
+
+html::before {
+    content: "";
+    background-image: url(../img/bg_vs.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+main {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabecalho {
+    padding-top: 5px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.cabecalho .titulo {
+    color: red;
+    /*var(--cor-titulo-fraco)*/
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: 'ssbf';
+    font-size: 52px;
+    line-height: 102px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.cabecalho .logo {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.selecao_de_personagens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecao_de_personagens .personagem_grade {
+    text-align: center;
+    width: 30%;
+    height: 60vh;
+    position: relative;
+}
+
+.selecao_de_personagens .personagem_grade img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 40vh;
+}
+
+.selecao_de_personagens .personagem_grade .nome::before {
+    content: "";
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.selecao_de_personagens .personagem_grade .nome {
+    position: relative;
+    top: 120%;
+}
+
+.selecao_de_personagens .personagem_grade.personagem_p1 .nome::before {
+    background-color: var(--cor-azul-principal);
+    border-right: 5px solid rgb(32, 0, 145);
+    border-bottom: 5px solid rgb(32, 0, 145);
+    border-top: 5px solid rgb(32, 0, 145);
+    border-left: 5px solid rgb(32, 0, 145);
+}
+
+.selecao_de_personagens .personagem_grade.personagem_p2 .nome::before {
+    background-color: var(--cor-vermelha-principal);
+    border-right: 5px solid rgb(136, 0, 0);
+    border-bottom: 5px solid rgb(136, 0, 0);
+    border-top: 5px solid rgb(136, 0, 0);
+    border-left: 5px solid rgb(136, 0, 0);
+}
+
+.selecao_de_personagens .personagem_grade .nome h2 {
+    color: var(--cor-padrao);
+    font-family: 'ssbf', sanas-serif;
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+    font-size: 27px;
+}
+
+.selecao_de_personagens .lista_de_personagens {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem {
+    border: 3px solid var(--cor-padrao);
+    background: var(--cor-fundo);
+    width: 25%;
+    height: 150px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.selecao_de_personagens .lista_de_personagens .selecionado {
+    border: 8px solid var(--cor-azul-principal);
+    animation: c-glowing-blue .4s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem::hover {
+    animation: c-glowing-blue .4s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem.p2_selecionado {
+    border: 8px solid var(--cor-vermelha-principal);
+    animation: c-glowing-red .4s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao_de_personagens .lista_de_personagens .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-secundaria);
+    transition: opacity .3s ease-in-out;
+    animation: alternate;
+    animation: text-glowing-blue .4s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem.selecionado .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao_de_personagens .lista_de_personagens .personagem.p2_selecionado .tag {
+    color: black;
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.fight_button {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background: radial-gradient(red, black);
+    border: 3px solid black;
+    border-radius: 40mm;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: none;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 2px red;
+}
+
+.fight_button img {
+    width: 95%;
+    height: 100%;
+}
+
+.fight_button::hover {
+    transform: scale(1.07);
+    animation: c-glowing-black .4s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.home_button {
+    width: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    background: radial-gradient(red, black);
+    border: 3px solid black;
+    border-radius: 40mm;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: none;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 2px red;
+    padding-bottom: 6px;
+}
+
+.home_button img {
+    width: 100%;
+    height: 100%;
+}
+
+.home_button::hover {
+    transform: scale(1.07);
+    animation: c-glowing-black .4s ease-in-out infinite;
+    animation-direction: alternate;
+}

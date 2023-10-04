@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./src/img/ssb_icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/css/font.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/animations.css">
+    <link rel="stylesheet" href="./src/css/variables.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <title>Super Smash Bros</title>
+</head>
+
+<body>
+    <audio src="./src/audio/super_smash_bross.mp3" autoplay reload loop></audio>
+    <main>
+        <header class="cabecalho">
+            <h1 class="titulo">Select Your Bros</h1>
+            <img class="logo" src="./src/img/bg_icon.png" alt="Versus">
+        </header>
+        <div class="selecao_de_personagens">
+            <div class="personagem_grade personagem_p1">
+                <img src="./src/img/vs_mario.png" alt="Selected Bros" id="personagem_p1">
+                <div class="nome">
+                    <h2 id="nome_p1">Mario</h2>
+                </div>
+            </div>
+            <ul class="lista_de_personagens">
+                <li class="personagem selecionado" id="mario" data-name="Mario">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_mario.jpg" alt="Mario">
+                </li>
+
+                <li class="personagem" id="donkey_kong" data-name="Donkey_Kong">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_donkey_kong.jpg" alt="Donkey Kong">
+                </li>
+
+                <li class="personagem" id="link" data-name="Link">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_link.jpg" alt="Link">
+                </li>
+
+                <li class="personagem" id="samus" data-name="Samus">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_samus.jpg" alt="Samus">
+                </li>
+
+                <li class="personagem p2_selecionado" id="random" data-name="Random">
+                    <span class="tag">2P</span>
+                    <img src="./src/img/slc_random.jpg" alt="Random">
+                </li>
+
+                <li class="personagem" id="yoshi" data-name="Yoshi">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_yoshi.jpg" alt="Yoshi">
+                </li>
+
+                <li class="personagem" id="kirby" data-name="Kirby">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_kirby.jpg" alt="Kirby">
+                </li>
+
+                <li class="personagem" id="fox" data-name="Fox">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_fox.jpg" alt="Fox">
+                </li>
+
+                <li class="personagem" id="pikachu" data-name="Pikachu">
+                    <span class="tag">1P</span>
+                    <img src="./src/img/slc_pikachu.jpg" alt="Pikachu">
+                </li>
+            </ul>
+            <div class="personagem_grade personagem_p2">
+                <img src="./src/img/vs_random.png" alt="Selected Bros" id="personagem_p1">
+                <div class="nome">
+                    <h2>Random</h2>
+                </div>
+            </div>
+        </div class='botao'>
+        <a href="./src/intro/mario.html" id="botao" class="fight_button"><img src="./src/img/bg_fight.png" alt="Fight!"></a>
+        </div>
+    </main>
+
+    <script src="./src/js/index.js"></script>
+
+</body>
+</html>
